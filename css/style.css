@@ -99,8 +99,12 @@ button::-moz-focus-inner,
 
 a {
     color: inherit;
-    text-decoration: none;
+    /* text-decoration: none; */
     cursor: pointer;
+}
+
+a:hover {
+    color: rgb(85, 25, 226);
 }
 
 ul li {
@@ -417,9 +421,9 @@ p {
 .menu{
     display: none;
 }
-.logo{
+/* .logo{
     margin: auto;
-}
+} */
 .header__img {
     width: 92px;
     margin-left: 20px;
