@@ -421,9 +421,9 @@ p {
 .menu{
     display: none;
 }
-.logo{
+/* .logo{
     margin: auto;
-}
+} */
 .header__img {
     width: 92px;
     margin-left: 20px;
