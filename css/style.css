@@ -99,9 +99,9 @@ button::-moz-focus-inner,
     padding: 0;
 }
 
-.btn:hover {
+/* .btn:hover {
  color: #ffffff;
-}
+} */
 
 a {
     color: inherit;
