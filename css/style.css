@@ -86,6 +86,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+    appearance: button;
     -webkit-appearance: button;
 }
 
@@ -503,9 +504,6 @@ max-width: 300px;
 }
 .title-accent{
     font-size: 17px;
-}
-.line-accent{
-    /* margin: auto; */
 }
 .section-right-text{
     font-size: 12px;
