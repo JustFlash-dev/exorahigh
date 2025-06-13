@@ -212,6 +212,10 @@ p {
     width: 40px;
     margin-left: 20px;
 }
+.header a {
+    text-decoration: none;
+    color: #000;
+}
 .menu__item {
     margin: 0px 25px;
 }
