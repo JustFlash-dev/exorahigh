@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = document.getElementById("name");
   const phoneInput = document.getElementById("phone");
   const emailInput = document.getElementById("email");
-  const contactInput = document.getElementById("messangers");
+  const messangersInput = document.getElementById("messangers");
   const submitBtn = form.querySelector(".send-form-btn");
 
   // === Утилиты ===
@@ -65,8 +65,8 @@ checkFormFields();
     checkFormValidity();
   });
 
-  contactInput.addEventListener("input", () => {
-    contactInput.value = contactInput.value.replace(/[^a-zA-Z0-9_.@\-]/g, "");
+  messangersInput.addEventListener("input", () => {
+    messangersInput.value = messangersInput.value.replace(/[^a-zA-Z0-9_.@\-]/g, "");
   });
 
   phoneInput.addEventListener("focus", () => {
@@ -94,7 +94,7 @@ checkFormFields();
     const name = nameInput.value.trim();
     const phone = phoneInput.value.trim();
     const email = emailInput.value.trim();
-    const contact = contactInput.value.trim(); // не обязательное
+    const messangers = messangersInput.value.trim(); // не обязательное
 
     if (!name || !phone || !email) {
       showMessage("Please fill in all required fields.", "error");
@@ -125,7 +125,7 @@ checkFormFields();
     formData.append("utm_adset", urlParams.get("adset") || "");
     formData.append("utm_placement", urlParams.get("placement") || "");
 
-    document.getElementById("preloader").classList.remove("hidden");
+    // document.getElementById("preloader").classList.remove("hidden");
     try {
       const response = await fetch("https://script.google.com/macros/s/AKfycbzSPo2L2ryVJt-JrAnwsAaUrxwD6GmgaXc81gXeAQsPt824pEnyRH1ak05iTk-QnXxLyQ/exec", {
         method: "POST",
@@ -139,7 +139,7 @@ checkFormFields();
         checkFormValidity();
         if (response.status === 200 || response.status === 302) {
             sessionStorage.setItem("formSubmitted", "true");
-            window.location.href = window.location.origin + "/thankyou.html";
+            // window.location.href = window.location.origin + "/thankyou.html";
             return;
       }
       } else {
