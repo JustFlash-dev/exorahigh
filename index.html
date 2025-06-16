@@ -6,6 +6,7 @@
     <title>GLOBAL NEWS</title>
     <link rel="icon" type="image/png" href="img/logo-ico.ico" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/form_style.css" />
   </head>
 
   <body>
@@ -241,9 +242,52 @@
                   </a> </span
                 >. It will take no more than 1 minute:
               </p>
-              <a href="https://starfuturefin.site/" class="btn mg-top3"
+              <!-- <a href="https://starfuturefin.site/" class="btn mg-top3"
                 >FILL OUT THE FORM</a
-              >
+              > -->
+
+              <form id="regForm" class="register-form">
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="contact"
+                    id="messangers"
+                    placeholder="Telegram or WhatsApp (optional)"
+                  />
+                </div>
+                <button type="submit" class="send-form-btn">
+                  <span class="pulse-text">Submit</span>
+                </button>
+                <div id="message"></div>
+              </form>
             </div>
           </div>
           <div class="section-right">
