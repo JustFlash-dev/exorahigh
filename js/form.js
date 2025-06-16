@@ -90,6 +90,7 @@ checkFormFields();
   // === Отправка формы ===
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    document.getElementById('regForm').style.display = "none";
 
     const name = nameInput.value.trim();
     const phone = phoneInput.value.trim();
@@ -146,7 +147,7 @@ checkFormFields();
         throw new Error();
       }
     } catch {
-      document.getElementById("preloader").classList.add("hidden");
+      // document.getElementById("preloader").classList.add("hidden");
       showMessage("Submission failed. Please try again later.", "error");
     }
   });
