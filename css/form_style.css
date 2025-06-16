@@ -245,7 +245,7 @@ body.thank-you-page {
 }
 
 /* Прелоадер: фон и анимация */
-.preloader {
+/* .preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -269,28 +269,27 @@ body.thank-you-page {
   border-top: 6px solid #fe391f;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-}
+} */
 
 /* Ключевые кадры для анимации */
-@keyframes spin {
+/* @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 
 /* счетчик */
 
-.fake-stats {
+/* .fake-stats {
   font-family: var(--primary-font);
   display: flex;
   text-align: center;
-  /* font-size: 14px; */
   color: #bbb;
 }
 
 .fake-stats span {
   font-weight: bold;
   color: #ffffff;
-}
+} */
 
 /* Стили формы */
 .register-form {
