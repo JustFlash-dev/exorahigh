@@ -551,19 +551,3 @@ max-width: 300px;
     margin-bottom: 20px;
 }
 }
-
-.scroll-footer-btn {
-  padding: 12px 28px;
-  font-size: 18px;
-  background: #fe391f;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin: 24px auto;
-  display: block;
-}
-.scroll-footer-btn:hover {
-  background: #b30e0e;
-}

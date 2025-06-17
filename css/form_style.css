@@ -10,33 +10,6 @@
   --success-text: #155724;
 }
 
-/* body {
-  font-family: var(--primary-font);
-  background: var(--primary-color);
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  color: var(--primary-text-color);
-  position: relative;
-  z-index: 0;
-} */
-
-/* body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(/img/vecteezy_polygon-abstract-background_.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(24, 22, 22, 0.65);
-  background-blend-mode: darken;
-  z-index: -1;
-} */
-
 input, textarea, button, select,
 .form-input,
 .modal, 
@@ -208,88 +181,6 @@ footer a {
     font-size: 16px;
   }
 }
-/* ===== Thank You Page Styles ===== */
-body.thank-you-page {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-.thank-you-container {
-  text-align: center;
-  max-width: 600px;
-  padding: 40px;
-  border-radius: 16px;
-  background-color: #1e1e1e;
-  box-shadow: 0 0 25px rgba(255, 60, 40, 0.2);
-}
-
-.thank-you-container h1 {
-  font-size: 32px;
-  color: #fe391f;
-  margin-bottom: 20px;
-}
-
-.thank-you-container p {
-  font-size: 18px;
-  color: #fff;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: scale(0.96); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Прелоадер: фон и анимация */
-/* .preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.preloader.hidden {
-  display: none;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #fff;
-  border-top: 6px solid #fe391f;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-} */
-
-/* Ключевые кадры для анимации */
-/* @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
-
-/* счетчик */
-
-/* .fake-stats {
-  font-family: var(--primary-font);
-  display: flex;
-  text-align: center;
-  color: #bbb;
-}
-
-.fake-stats span {
-  font-weight: bold;
-  color: #ffffff;
-} */
 
 /* Стили формы */
 .register-form {
