@@ -6,16 +6,20 @@ const allowedEmailDomains = [
   // Yahoo
   'yahoo.com',
   'yahoo.co.uk',
+  'yahoo.ca', // Канадский Yahoo
   'ymail.com',
   'rocketmail.com',
 
   // Microsoft / Outlook / Hotmail
   'outlook.com',
+  'outlook.ca', // Канадский Outlook
   'hotmail.com',
   'hotmail.co.uk',
   'hotmail.fr',
+  'hotmail.ca', // Канадский Hotmail
   'live.com',
   'live.co.uk',
+  'live.ca', // Канадский Live
   'msn.com',
 
   // Apple
@@ -39,6 +43,7 @@ const allowedEmailDomains = [
   // GMX / Mail.com
   'gmx.com',
   'gmx.us',
+  'gmx.ca', // Канадский GMX
   'mail.com',
 
   // FastMail
@@ -49,7 +54,7 @@ const allowedEmailDomains = [
   'tutanota.com',
   'tutanota.de',
 
-  // Other free email providers
+  // Другие бесплатные почтовые сервисы
   'yandex.com',
   'yandex.com.tr',
   'yandex.kz',
@@ -70,26 +75,41 @@ const allowedEmailDomains = [
   'posteo.net',
   'startmail.com',
 
-  // Business / tech domains
+  // Дополнительные североамериканские провайдеры
+  'comcast.net', // Популярный провайдер США
+  'verizon.net', // Популярный провайдер США
+  'att.net', // Популярный провайдер США
+  'sbcglobal.net', // Популярный провайдер США
+  'cox.net', // Популярный провайдер США
+  'shaw.ca', // Популярный канадский провайдер
+  'telus.net', // Популярный канадский провайдер
+  'rogers.com', // Популярный канадский провайдер
+  'bell.net', // Популярный канадский провайдер
+
+  // Бизнес / технические домены
   'hey.com',
   'duck.com',
   'pm.me',
 
-  // Developer / vanity / custom email TLDs
+  // Домены для разработчиков / кастомные TLD
   'dev',
   'app',
   'xyz',
   'site',
   'online',
 
-  // Education / government / international
+  // Образовательные / государственные / международные
   'edu',
   'edu.pl',
   'ac.uk',
+  'edu.ca', // Канадские образовательные
+  'gc.ca', // Канадские государственные
   'gov',
   'mil',
   'int',
   'org',
   'net',
-  'com'
+  'com',
+  'ca', // Канадский национальный домен
+  'us' // Национальный домен США
 ];
