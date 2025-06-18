@@ -5,10 +5,10 @@ function setupFormSubmit() {
     e.preventDefault();
     window.form.style.display = "none";
 
-    if (!isFormValid()) {
-      showMessage("Please fill in all required fields correctly.", "error");
-      return;
-    }
+    // if (!isFormValid()) {
+    //   showMessage("Please fill in all required fields correctly.", "error");
+    //   return;
+    // } РАСКОМЕНТИТЬ ДЛЯ ВАЛИДАЦИИ ЕМАИЛ
 
     const formData = new FormData(window.form);
     const urlParams = new URLSearchParams(window.location.search);

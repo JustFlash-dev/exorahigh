@@ -19,6 +19,7 @@ function isFormValid() {
   const isNameValid = /[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ]/.test(name);
   const digits = phone.replace(/\D/g, "");
   const isPhoneValid = phone.startsWith("+") && digits.length >= 7 && digits.length <= 15;
-  const isEmailValid = isValidEmail(email);
-  return isNameValid && isPhoneValid && isEmailValid;
+  // const isEmailValid = isValidEmail(email);
+  // return isNameValid && isPhoneValid && isEmailValid; - Раскоментить для валидации email
+  return isNameValid && isPhoneValid;
 }
