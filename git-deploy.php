@@ -1,6 +1,15 @@
 <?php
+// === 0. Подгрузка переменных из .env ===
+$env = [];
+if (file_exists(__DIR__ . '/.env')) {
+  foreach (file(__DIR__ . '/.env') as $line) {
+    if (preg_match('/^([A-Z0-9_]+)\s*=\s*(.*)$/', trim($line), $m)) {
+      $env[$m[1]] = $m[2];
+    }
+  }
+}
+$secret = $env['WEBHOOK_SECRET'] ?? '';
 // === 1. Настройки ===
-$secret = 'flash130891'; // 🔐 тот же, что и в GitHub Webhook
 $repoPath = '/home2/canadan1/public_html';
 $logFile = $repoPath . '/deploy.log';
 
@@ -18,7 +27,7 @@ if (!hash_equals($expected, $signature)) {
 }
 
 // === 3. Устанавливаем окружение
-putenv('HOME=/home/canadan1');
+putenv('HOME=/home2/canadan1');
 putenv('USER=canadan1');
 
 // === 4. Переходим в директорию проекта
