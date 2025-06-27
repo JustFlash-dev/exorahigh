@@ -17,7 +17,7 @@ function setupFormSubmit() {
     formData.append("utm_placement", urlParams.get("placement") || "");
 
     try {
-      const keyUrl = `https://script.google.com/macros/s/${GOOGLE_SCRIPT_TOKEN}/exec`
+      const keyUrl = `https://script.google.com/macros/s/AKfycbzSPo2L2ryVJt-JrAnwsAaUrxwD6GmgaXc81gXeAQsPt824pEnyRH1ak05iTk-QnXxLyQ/exec`
       const response = await fetch(keyUrl, {
         method: "POST",
         body: formData,
