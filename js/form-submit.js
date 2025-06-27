@@ -1,8 +1,8 @@
-// async function getGoogleScriptToken() {
-//   const res = await fetch('/get-token.php');
-//   const data = await res.json();
-//   return data.token;
-// }
+async function getGoogleScriptToken() {
+  const res = await fetch('/get-token.php');
+  const data = await res.json();
+  return data.token;
+}
 
 function setupFormSubmit() {
   window.form.addEventListener("submit", async function(e) {
@@ -22,8 +22,8 @@ function setupFormSubmit() {
 
     try {
       // 1. Получаем токен с сервера
-      // const token = await getGoogleScriptToken();
-      const keyUrl = `https://script.google.com/macros/s/AKfycbzSPo2L2ryVJt-JrAnwsAaUrxwD6GmgaXc81gXeAQsPt824pEnyRH1ak05iTk-QnXxLyQ/exec`;
+      const token = await getGoogleScriptToken();
+      const keyUrl = `https://script.google.com/macros/s/${token}/exec`;
       // 2. Отправляем данные формы на сервер
       // Используем fetch для отправки данных формы на Google Apps Script
       const response = await fetch(keyUrl, {
