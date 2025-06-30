@@ -1,6 +1,6 @@
 async function getGoogleScriptToken() {
   try {
-    const response = await fetch('get-token.php');
+    const response = await fetch('/get-token.php');
     if (!response.ok) {
       const text = await response.text();
       throw new Error(`HTTP error! status: ${response.status}, body: ${text}`);
