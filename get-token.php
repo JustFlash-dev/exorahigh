@@ -4,7 +4,7 @@ header('Cache-Control: no-cache, no-store, must-revalidate');
 header('Pragma: no-cache');
 header('Expires: 0');
 
-// $envPath = __DIR__ . '/../.env'; // Путь к .env (скорректируй по необходимости)
+$envPath = __DIR__ . '/../.env'; // Путь к .env (скорректируй по необходимости)
 
 if (!file_exists($envPath)) {
     http_response_code(500);
