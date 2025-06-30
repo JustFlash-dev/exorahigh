@@ -26,7 +26,7 @@ require_once $autoloadPath;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..'); // Путь к .env
 $dotenv->load();
 
-$token = $_ENV['GOOGLE_SCRIPT_TOKEN'] ?? '';
+$token = $env['GOOGLE_SCRIPT_TOKEN'] ?? '';
 if (!$token) {
     http_response_code(500);
     echo json_encode(['error' => 'Token not found in .env']);
