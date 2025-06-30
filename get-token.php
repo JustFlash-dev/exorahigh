@@ -22,4 +22,3 @@ if (!$token) {
 }
 
 echo json_encode(['token' => $token]);
-?>
