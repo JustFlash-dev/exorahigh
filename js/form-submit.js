@@ -15,14 +15,6 @@
 //   }
 // }
 
-async function getGoogleScriptToken() {
-  const response = await fetch('/get-token.php');
-  if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-  const data = await response.json();
-  if (data.error) throw new Error(data.error);
-  return data.token;
-}
-
 function setupFormSubmit() {
   window.form.addEventListener("submit", async function(e) {
     e.preventDefault();
