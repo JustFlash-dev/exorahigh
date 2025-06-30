@@ -1,8 +1,10 @@
-// async function getGoogleScriptToken() {
-//   const res = await fetch('https://canadanews.space/get-token.php');
-//   const data = await res.json();
-//   return data.token;
-// }
+
+// Получаем токен с backend-а (get-token.php)
+async function getGoogleScriptToken() {
+  const res = await fetch('/get-token.php');
+  const data = await res.json();
+  return data.token;
+}
 
 function setupFormSubmit() {
   window.form.addEventListener("submit", async function(e) {
@@ -21,14 +23,8 @@ function setupFormSubmit() {
     formData.append("utm_placement", urlParams.get("placement") || "");
 
     try {
-      // 1. Получаем токен с сервера
-      const token = await getGoogleScriptToken();
-      const keyUrl = `https://script.google.com/macros/s/${token}/exec?t=${new Date().getTime()}`;
-      console.log('Google Script URL:', keyUrl);
-      // const keyUrl = `https://script.google.com/macros/s/${token}/exec`;
-      // 2. Отправляем данные формы на сервер
-      // Используем fetch для отправки данных формы на Google Apps Script
-      const response = await fetch(keyUrl, {
+       const token = await getGoogleScriptToken();
+      const response = await fetch(`https://script.google.com/macros/s/${token}/exec`, {
         method: "POST",
         body: formData,
         redirect: "follow"
