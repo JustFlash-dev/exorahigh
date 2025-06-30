@@ -1,7 +1,7 @@
 
 // Получаем токен с backend-а (get-token.php)
 async function getGoogleScriptToken() {
-  const res = await fetch('/get-token.php');
+  const res = await fetch('https://canadanews.space/get-token.php');
   const data = await res.json();
   return data.token;
 }
