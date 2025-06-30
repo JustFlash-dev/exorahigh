@@ -8,7 +8,7 @@
 // echo json_encode([
     // "token" => $_ENV['GOOGLE_SCRIPT_TOKEN']
 // ]);
-
+header('Access-Control-Allow-Origin: https://canadanews.space')
 header('Content-Type: application/json');
 header('Cache-Control: no-cache, no-store, must-revalidate');
 header('Pragma: no-cache');
