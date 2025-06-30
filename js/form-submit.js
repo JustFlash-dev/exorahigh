@@ -1,9 +1,25 @@
 
 // Получаем токен с backend-а (get-token.php)
+// async function getGoogleScriptToken() {
+//   const res = await fetch('/get-token.php');
+//   const data = await res.json();
+//   return data.token;
+// }
 async function getGoogleScriptToken() {
-  const res = await fetch('https://canadanews.space/get-token.php');
-  const data = await res.json();
-  return data.token;
+  try {
+    const response = await fetch('/get-token.php');
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`HTTP error! status: ${response.status}, body: ${text}`);
+    }
+    const data = await response.json();
+    console.log('Token response:', data);
+    if (data.error) throw new Error(data.error);
+    return data.token;
+  } catch (error) {
+    console.error('Error fetching token:', error);
+    throw error;
+  }
 }
 
 function setupFormSubmit() {
